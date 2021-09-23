@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <mata name="description" content="YYH test html">
     <mata name="author" content="YYH">
-    <link rel="icon" href="Image\Saturn.png">
+    <link rel="icon" href="Image/Saturn.png">
     <script
      src="https://kit.fontawesome.com/b3ff0b2f81.js"
      crossorigin="anonymous"
@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav id ="navbar"></nav>
+    <nav id ="navbar">
         <div class="navbar__logo">
             <i class="fab fa-diaspora"></i>
             <a href="#">saturn</a>
@@ -29,9 +29,10 @@
             <li class="navbar__menu__item">Testimonials</li>
             <li class="navbar__menu__item">Contact</li>
         </ul>
+    </nav>
     <!-- Home -->
     <section id="home">
-        <img src="image" alt="profile img" class="home__avatar">
+        <img src="Image\dog.png" alt="profile img" class="home__avatar">
         <h1 class="home__title">hello</h1>
         <h2 class="home__description">123456</h2>
         <button class="home_contact">contact me</button>
@@ -182,10 +183,129 @@
         </div>
     </section>
     <!-- Work -->
-    <section id="work"></section>
+    <section id="work">
+        <div class="section__container">
+            <h1>My Work</h1>
+            <h3>projects</h3>
+            <div class="work__categories">
+                <button class="categories__btn" data-filter="all">All <span class="category__count">8</span></button>
+                <button class="categories__btn" data-filter="front-end">Front-end <span class="category__count">3</span></button>
+                <button class="categories__btn" data-filter="back-end">Back-end <span class="category__count">3</span></button>
+                <button class="categories__btn" data-filter="mobile">Mobile <span class="category__count">2</span></button>
+            </div>
+        </div>
+        <div class="work__projects">
+            <a href="" class="project" target="blank" data-type="foront-end">
+                <img src="Image/projects/project1.png" alt="Youtube" class="project__img">
+                <div class="project__description">
+                    <h3>Youtube Site</h3>
+                    <span>Clone coding with HTML, CSS</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="foront-end">
+                <img src="Image/projects/project2.png" alt="navbar" class="project__img">
+                <div class="project__description">
+                    <h3>Responsive Navbar</h3>
+                    <span>HTML, CSS with media quert</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="foront-end">
+                <img src="Image/projects/project3.png" alt="navbar" class="project__img">
+                <div class="project__description">
+                    <h3>Shopping mall game</h3>
+                    <span>HTML, CSS, JavaScpript, Json</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="back-end">
+                <img src="Image/projects/project4.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="back-end">
+                <img src="Image/projects/project4.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="mobile">
+                <img src="Image/projects/project5.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="mobile">
+                <img src="Image/projects/project6.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="mobile">
+                <img src="Image/projects/project7.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+            <a href="" class="project" target="blank" data-type="mobile">
+                <img src="Image/projects/project8.png" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>Project</h3>
+                    <span>Explanation</span>
+                </div>
+            </a>
+        </div>
+    </section>
     <!-- Testimonials -->
-    <section id="testimonials"></section>
+    <section id="testimonials">
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>See what they say about me</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="Image/testimonial/people1.jpg" alt="" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                        fuga libero nulla eveniet aperiam laborum, quis provident
+                        quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+                        explicabo tempora, dignissimos accusantium inventore ducimus!</p>
+                    <p class="name"><a href="">YYH</a> / BuchenUniv</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="Image/testimonial/people1.jpg" alt="" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                        fuga libero nulla eveniet aperiam laborum, quis provident
+                        quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+                        explicabo tempora, dignissimos accusantium inventore ducimus!</p>
+                    <p class="name"><a href="">YYH</a> / BuchenUniv</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">jwkid9124@gmail.com</h2>
+        <div class="contact__links">
+            <a href="http://github.com/marangY" target="blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </div>
+        <p>2021 Dream Coding YYH - All rights reserved</p>
+    </section>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
