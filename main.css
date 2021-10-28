@@ -88,7 +88,7 @@
     padding: 16px;
 }
 
-.navbar__logo{
+.navbar__logo {
     font-size: var(--font-medium);
     color: var(--color-white);
     font-weight: var(--weight-bold);
@@ -105,7 +105,7 @@
     cursor: pointer;
 }
 
-.navbar__menu__item.active{
+.navbar__menu__item.active {
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radius);
 }
@@ -116,25 +116,25 @@
 }
 
 /* Home */
-#home{
+#home {
     background: url(/Image/background.png) center/cover no-repeat;
     padding: 40px;
     text-align: center;
 }
 
-.home__avatar{
+.home__avatar {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 2px solid var(--color-white);
 }
 
-.homr__title,
-.home__descrition{
-    color: var(--color-white)
+.home__title,
+.home__description {
+    color: var(--color-white);
 }
 
-.home__contact{
+.home__contact {
     color: var(--color-white);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
@@ -144,8 +144,12 @@
     padding: 8px 12px;
 }
 
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
+
 /* Section common */
-.section{
+.section {
   padding: 50px;
   text-align: center;
   margin: auto;
@@ -157,13 +161,13 @@
 }
 
 /* about */
-.about__majors{
+.about__majors {
   display: flex;
   justify-content: space-between;
   margin: 80px 0px;
 }
 
-.major__icon{
+.major__icon {
   width: 170px;
   height: 170px;
   font-size: 70px;
@@ -179,7 +183,7 @@
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
 }
-.major__icon i{
+.major__icon i {
   transition: all var(--animation-duration) ease;
 }
 
@@ -192,41 +196,41 @@
   font-size: var(--font-small);
 }
 
-.job{
+.job {
   display: flex;
   align-items: center;
 }
 
-.job__description{
+.job__description {
   margin: 0 16px;
   text-align: left;
 }
 
-.job__name{
+.job__name {
   font-size: var(--font-small);
 }
 
-.job__period{
+.job__period {
   font-size: var(--font-micro);
 }
 
 /* Skills */
-#skills{
+#skills {
   background-color: var(--color-yellow);
 }
 
-.skillset{
+.skillset {
   display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
   margin: 20px 0;
 }
 
-.skillset__title{
+.skillset__title {
   color: var(--color-white);
 }
 
-.skillset__left{
+.skillset__left {
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
   padding: 20px 40px;
@@ -424,4 +428,120 @@
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in;
+}
+
+/* Scroll */
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+}
+
+.navbar__toggle-btn{
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  right: 25px;
+  display: none;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  /* Font Size */
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  } 
+
+  .navbar__toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-pink);
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar__menu.open{
+    display: block;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
+  .about__majors{
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .major {
+    margin-bottom: 30px;
+  }
+
+  .testimonial__avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+
+  .skill {
+    flex-direction: column;
+  }
+
+  .categories__btn {
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
+  }
 }
