@@ -24,7 +24,7 @@ navbarMenu.addEventListener("click", (event) => {
 
 // contactme
 const homeContact = document.querySelector(".home__contact");
-homeContact.addEventListener("click", (event) => {
+homeContact.addEventListener("click", () => {
     scrollIntoView("#contact");
 });
 
