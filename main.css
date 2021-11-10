@@ -112,6 +112,7 @@
   margin: 0px 4px;
   color: var(--color-white);
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .navbar__menu__item:hover {
@@ -450,12 +451,20 @@
   color: var(--color-white);
   background-color: var(--color-sky-blue);
   border-radius: 50%;
+  display: none;
+}
+
+.arrow-up.open {
+  display: block;
 }
 
 .navbar__toggle-btn{
-  color: var(--color-white);
   font-size: var(--font-medium);
-  right: 25px;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
   display: none;
 }
 
@@ -473,10 +482,6 @@
 
   .navbar__toggle-btn {
     display: block;
-    top: 16px;
-    right: 16px;
-    font-size: var(--font-medium);
-
   }
 
   #navbar {
@@ -490,6 +495,7 @@
     text-align: center;
     width: 100%;
     display: none;
+    background-color: var(--color-sky-blue);
   }
 
   .navbar__menu.open{
@@ -552,4 +558,5 @@
     right: 16px;
     bottom: 16px;
   }
+
 }

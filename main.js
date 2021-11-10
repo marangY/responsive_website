@@ -19,16 +19,45 @@ navbarMenu.addEventListener("click", (event) => {
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
 });
 
-// contactme
+// contact me
 const homeContact = document.querySelector(".home__contact");
 homeContact.addEventListener("click", () => {
     scrollIntoView("#contact");
 });
 
+// home opacity control
+const home = document.querySelector(".home__contanier");
+const homeHeight = home.getBoundingClientRect().height
+document.addEventListener("scroll", () => {
+    home.style.opacity = 1 - window.scrollY/homeHeight;
+});
+
+// hambuger menu clicker
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open");
+});
+
+const homeMain = document.querySelector("#home");
+const homeMainHeight = homeMain.getBoundingClientRect().height;
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+    if(1 - window.scrollY/homeMainHeight < 0){
+        arrowUp.classList.add("open");
+    }
+    else{
+        arrowUp.classList.remove("open");
+    }
+});
+
+
+
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : "smooth"});
 }
+
