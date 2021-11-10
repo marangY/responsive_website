@@ -51,7 +51,11 @@ document.addEventListener("scroll", () => {
     }
     else{
         arrowUp.classList.remove("open");
+
     }
+});
+arrowUp.addEventListener("click", () => {
+    scrollIntoView("#home");
 });
 
 
