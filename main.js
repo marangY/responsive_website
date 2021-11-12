@@ -42,7 +42,7 @@ navbarToggleBtn.addEventListener("click", () => {
     navbarMenu.classList.toggle("open");
 });
 
-// contact btn
+// arrowup btn
 const homeMainHeight = document.querySelector("#home").getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
