@@ -454,8 +454,12 @@
   display: none;
 }
 
-.arrow-up.open {
+.arrow-up.visible {
   display: block;
+}
+
+.arrow-up.color {
+  color: var(--color-yellow);
 }
 
 .navbar__toggle-btn{

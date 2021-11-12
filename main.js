@@ -42,23 +42,18 @@ navbarToggleBtn.addEventListener("click", () => {
     navbarMenu.classList.toggle("open");
 });
 
-const homeMain = document.querySelector("#home");
-const homeMainHeight = homeMain.getBoundingClientRect().height;
+// contact btn
+const homeMainHeight = document.querySelector("#home").getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
-    if(1 - window.scrollY/homeMainHeight < 0){
-        arrowUp.classList.add("open");
-    }
-    else{
-        arrowUp.classList.remove("open");
-
-    }
+    if(window.scrollY/homeMainHeight > 0.5)
+        arrowUp.classList.add("visible");
+    else
+        arrowUp.classList.remove("visible");
 });
 arrowUp.addEventListener("click", () => {
     scrollIntoView("#home");
 });
-
-
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
