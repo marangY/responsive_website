@@ -46,10 +46,12 @@ navbarToggleBtn.addEventListener("click", () => {
 const homeMainHeight = document.querySelector("#home").getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
-    if(window.scrollY/homeMainHeight > 0.5)
+    if(window.scrollY/homeMainHeight > 0.5){
         arrowUp.classList.add("visible");
-    else
+        }
+    else{
         arrowUp.classList.remove("visible");
+    }
 });
 arrowUp.addEventListener("click", () => {
     scrollIntoView("#home");
