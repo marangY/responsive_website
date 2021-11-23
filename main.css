@@ -30,6 +30,7 @@
   /* Annimation */
   --animation-duration: 300ms;
 }
+
   /* Universal tags */
   * {
   box-sizing: border-box;
@@ -277,24 +278,27 @@
 }
 
 /* Work */
-.work__catategories {
+/* Work */
+
+.work__categories {
   margin: 40px;
 }
 
-.categories__btn {
+.category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
-.categories__btn.selected,
-.categories__btn:hover {
-  background-color: var(--color-pink);
+.category__btn.selected,
+.category__btn:hover {
+  background-color: var(--color-sky-blue);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -304,13 +308,13 @@
   background-color: var(--color-orange);
   border-radius: 50%;
   color: var(--color-white);
-  height: 24px;
   width: 24px;
-  display: inline-block;
+  height: 24px;
   line-height: 24px;
-  position: relative;
+  display: inline-block;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -319,58 +323,70 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
   position: relative;
-  width: 280px;
-  height: 250px;
-  margin: 2px;
-  background-color: var(--color-dark-white);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
   max-width: 100%;
   max-height: 100%;
+  align-self: center;
 }
 
 .project__description {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-black);
-  width: 100%;
-  height: 100%;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all var(--color-dark-white) ease-in;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
   transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
 }
 
 .project:hover .project__description {
   opacity: 0.8;
+  transform: translateY(0px);
 }
 
-.project__description h3{
-  color: var(--color-white);
-  transform: translateY(0);
+.project__description h3 {
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
-  width: 25px;
-  height: 2px;
-  background-color: var(--color-dark-white);
   left: 50%;
-  margin-left: -12px;
+  width: 50px;
+  height: 2px;
+  transform: translateX(-50%);
   margin-top: 8px;
+  background-color: var(--color-dark-white);
 }
 
 /* Testimonials */
@@ -448,14 +464,17 @@
   width: 70px;
   height: 70px;
   font-size: 50px;
+  opacity: 0;
+  pointer-events: none;
   color: var(--color-white);
   background-color: var(--color-sky-blue);
   border-radius: 50%;
-  display: none;
+  transition: opacity 300ms ease-in;
 }
 
 .arrow-up.visible {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .arrow-up.color {
